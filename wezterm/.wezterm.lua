@@ -19,8 +19,8 @@ config.line_height = 1.2
 -- window size is increment of line height
 config.use_resize_increments = false 
 config.window_padding = {
-  left = 0,
-  right = 0,
+  left = 3,
+  right = 3,
   top = 0,
   bottom = 0,
 }

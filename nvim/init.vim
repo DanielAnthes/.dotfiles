@@ -58,11 +58,6 @@ nnoremap <Leader>C :IPythonCellExecuteCellJump<CR>
 nnoremap <Leader>l :IPythonCellClear<CR>
 nnoremap <Leader>x :IPythonCellClose<CR>
 
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
 " copilot
 nnoremap  <leader>ce :Copilot enable<CR>
 nnoremap  <leader>cd :Copilot disable<CR>
@@ -86,7 +81,6 @@ let g:slime_paste_filetype_blacklist = {}
 " terminal settings
 tnoremap <Esc> <C-\><C-n>  " exit terminal mode with escape
 autocmd TermOpen * setlocal nonumber norelativenumber  " no line numbers in terminal
-
 
 " GUI options especially for neovide 
 let g:neovide_cursor_animation_length=0.02
