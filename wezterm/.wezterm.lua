@@ -12,8 +12,18 @@ config.color_scheme = 'Gruvbox dark, medium (base16)'
 -- hide the tab bar if there is only one tab
 config.hide_tab_bar_if_only_one_tab = true
 
--- set font size
+-- set font
 config.font_size = 14.0
+config.line_height = 1.2
+
+-- window size is increment of line height
+config.use_resize_increments = false 
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
 
 -- and finally, return the configuration to wezterm
 return config
