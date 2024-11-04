@@ -13,7 +13,7 @@ config.color_scheme = 'Gruvbox dark, medium (base16)'
 config.hide_tab_bar_if_only_one_tab = true
 
 -- set font
-config.font_size = 14.0
+config.font_size = 13.0
 config.line_height = 1.2
 
 -- window size is increment of line height
