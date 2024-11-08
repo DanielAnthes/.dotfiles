@@ -4,7 +4,10 @@ set termguicolors
 set cmdheight=0  " hide commandline when not used
 
 " relative line numbers
-set number
+set relativenumber
+
+" underline cursorline
+set cursorline
 
 filetype plugin indent on
 syntax on
@@ -17,6 +20,7 @@ nnoremap <leader>pv :Explore<CR>
 nnoremap <leader>h :noh<CR>
 
 call plug#begin()
+Plug 'lervag/vimtex'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'smartpde/telescope-recent-files'
 Plug 'nvim-lua/plenary.nvim'
@@ -47,7 +51,6 @@ Plug 'tpope/vim-surround'
 Plug 'frazrepo/vim-rainbow'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'lervag/vimtex'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'psf/black', { 'branch': 'stable' }
@@ -68,8 +71,9 @@ augroup black_on_save
 augroup end
 
 let g:black_use_virtualenv = 0
-let g:rainbow_active = 0
+let g:rainbow_active = 1
 let g:ipython_cell_cell_command = "%paste"
+
 let g:python3_host_prog='/Users/danthes/miniconda3/envs/nvim/bin/python'
 let g:slime_target = "tmux"
 let g:slime_default_config = {
@@ -77,6 +81,10 @@ let g:slime_default_config = {
             \ 'target_pane': '{top-right}' }
 let g:slime_dont_ask_default = 1
 let g:slime_paste_filetype_blacklist = {}
+
+xmap <leader>s <Plug>SlimeRegionSend
+nmap <leader>s <Plug>SlimeMotionSend
+nmap <leader>ss <Plug>SlimeLineSend
 
 " terminal settings
 tnoremap <Esc> <C-\><C-n>  " exit terminal mode with escape

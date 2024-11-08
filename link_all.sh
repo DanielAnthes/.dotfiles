@@ -16,3 +16,6 @@ ln -s $dotfiles_dir/tmux/.tmux.conf $HOME/.tmux.conf
 
 # set up wezterm
 ln -s $dotfiles_dir/wezterm/.wezterm.lua $HOME/.wezterm.lua
+
+# set up zed
+ln -s $dotfiles_dir/zed/settings.json $cfg_folder/zed/settings.json
