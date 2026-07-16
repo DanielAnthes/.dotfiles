@@ -7,20 +7,116 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
+  "ssh_connections": [
+    {
+      "host": "hpc3.rz.uos.de",
+      "username": "danthes",
+      "projects": []
+    }
+  ],
+  "inlay_hints": {
+    "enabled": true,
+    "show_value_hints": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": {
+      "control": false,
+      "alt": false,
+      "shift": false,
+      "platform": false,
+      "function": false
+    }
+  },
+  "telemetry": {
+    "metrics": false
+  },
+  "auto_update": false,
+  //disable git blame inline
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "diagnostics": {
+    "button": true,
+    "include_warnings": true,
+    "lsp_pull_diagnostics": {
+      "enabled": true,
+      "debounce_ms": 50
+    },
+    "inline": {
+      "enabled": false,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    },
+    "cargo": null
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "terminal": {
+    "dock": "right",
+    "font_size": 13
+  },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:7b"
+    },
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
+      "model": "gpt-4.1"
+    }
   },
   "vim_mode": true,
-  "ui_font_size": 15,
-  "buffer_font_size": 13,
-  "buffer_line_height": { "custom": 2 },
+  "ui_font_size": 14,
+  "buffer_font_size": 14.0,
+  "buffer_font_weight": 300,
+  "buffer_font_family": "Zed Plex Mono",
+  "buffer_line_height": {
+    "custom": 1.4
+  },
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Andromeda"
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
+  },
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 120,
+  "format_on_save": "on",
+
+  "languages": {
+    "LaTeX": {
+      "show_edit_predictions": false
+    },
+    "Markdown": {
+      "show_edit_predictions": false,
+      "soft_wrap": "preferred_line_length",
+      "preferred_line_length": 80
+    },
+    "Python": {
+      "show_edit_predictions": false,
+      "enable_language_server": true,
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      }
+    }
   }
 }
